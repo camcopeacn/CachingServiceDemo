@@ -37,7 +37,7 @@ public class CacheEntityController {
         }
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public void remove(@PathVariable Long id) {
         try {
             cachingService.remove(id);
@@ -61,7 +61,7 @@ public class CacheEntityController {
         }
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public Optional<CustomEntity> get(@PathVariable Long id) {
         try {
             Optional<CustomEntity> entity = cachingService.get(id);
